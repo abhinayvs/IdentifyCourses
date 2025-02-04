@@ -1,4 +1,3 @@
-
 Feature: Form Validation
 
   Scenario: Validating Email field in the form

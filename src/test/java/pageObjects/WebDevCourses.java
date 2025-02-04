@@ -10,7 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.Screenshot;
@@ -28,12 +27,18 @@ public class WebDevCourses {
 	
 	@FindBy(xpath="//*[@id=\"react-autowhatever-1\"]/div[2]/ul")
 	WebElement searchRecommendations;
+//	
+//	@FindBy(xpath="//*[@id=\"cds-react-aria-17\"]")
+//	WebElement beginnerLevelCheckbox;
+//	
+//	@FindBy(xpath="//*[@id='cds-react-aria-49']")
+//	WebElement englishLanguageCheckbox;
 	
-	@FindBy(xpath="//*[@id=\"cds-react-aria-17\"]")
-	WebElement beginnerLevelCheckbox;
-	
-	@FindBy(xpath="//*[@id='cds-react-aria-49']")
-	WebElement englishLanguageCheckbox;
+    @FindBy(xpath = "(//*[text()='Beginner'])[1]")
+    WebElement beginnerLevelCheckbox;
+ 
+    @FindBy(xpath = "(//*[text()='English'])[2]")
+    WebElement englishLanguageCheckbox;
 	
 	@FindBy(xpath="//h3[contains(@class,'cds-CommonCard-title')]")
 	List<WebElement> allCoursesTitles;
@@ -60,8 +65,8 @@ public class WebDevCourses {
 	}
 	
 	public void filtering() throws InterruptedException {
-//		driver.findElement(By.xpath("//*[text()='English'][1]")).click();
-//		driver.findElement(By.xpath("//*[text()='Beginner'][1]")).click();
+//		WebElement beginnerLevelCheckbox = driver.findElement(By.xpath("//*[text()='English'][1]"));
+//		WebElement englishLanguageCheckbox = driver.findElement(By.xpath("//*[text()='Beginner'][1]"));
 		beginnerLevelCheckbox.click();
         englishLanguageCheckbox.click();
         screenshot.takeScreenshot(driver, "webdevCourses.png");

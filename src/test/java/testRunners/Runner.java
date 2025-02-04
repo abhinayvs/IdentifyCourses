@@ -16,8 +16,8 @@ import io.cucumber.junit.CucumberOptions;
         "pretty",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", 
         "html:target/cucumber-reports.html", 
-        "json:target/cucumber-reports.json"
-    }
+	        "json:target/cucumber-reports.json"
+	    }
 )
 public class Runner /*extends AbstractTestNGCucumberTests*/{
 
