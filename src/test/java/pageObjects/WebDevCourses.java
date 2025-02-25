@@ -2,8 +2,7 @@ package pageObjects;
 
 import java.time.Duration;
 import java.util.List;
-
-import org.openqa.selenium.By;
+	
 //import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -76,8 +75,10 @@ public class WebDevCourses {
     	
         for (int i = 1; i < 3; i++) {
             System.out.println("Course name: " + allCoursesTitles.get(i).getText());
-            System.out.println("Duration: " + allCoursesDuration.get(i).getText().split("·")[2]);
+//            System.out.println("Duration: " + allCoursesDuration.get(i).getText().split("·")[2]);
+            System.out.println("Duration: " + allCoursesDuration.get(i).getText());
             System.out.println("Ratings: " + allCoursesRatings.get(i).getText().split(", ")[1].split("·")[0]);
+            
         }
 	}
 	
